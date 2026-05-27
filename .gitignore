@@ -7,6 +7,7 @@ feedback-analysis-agent/
 # notebook and test
 notebook.ipynb
 test.py
+test.ipynb
 
 # output data
 output/
