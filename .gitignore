@@ -1,0 +1,15 @@
+# Environment
+feedback-analysis-agent/
+
+# .env
+.env
+
+# notebook and test
+notebook.ipynb
+test.py
+
+# output data
+output/
+
+# python cache
+__pycache__
