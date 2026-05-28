@@ -6,6 +6,7 @@ A multi-agent AI pipeline that automatically ingests user feedback from CSV file
 ## Dashboard
 
 ![FeedbackIQ Dashboard](assets/dashboard.png)
+!(assets/dashboard1.png)
 
 ---
 ## What It Does

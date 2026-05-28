@@ -3,8 +3,8 @@ import os
 
 try:
     llm = LLM(
-        model="gemini/gemini-1.5-flash-002",
-        api_key=os.getenv("GEMINI_API_KEY2")
+        model="gemini/gemini-2.5-flash",
+        api_key=os.getenv("GEMINI_API_KEY")
     )
 except Exception as e:
     raise Exception(f"Failed to initialize LLM — {e}")
