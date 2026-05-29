@@ -81,7 +81,5 @@ def main():
     except Exception as e:
         print(f"Error generating metrics — {e}")
 
-    print("something fishy")
-
 if __name__ == "__main__":
     main()

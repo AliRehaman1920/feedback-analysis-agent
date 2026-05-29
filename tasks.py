@@ -57,7 +57,7 @@ feature_extraction_task = Task(
         "For items where category is exactly 'Feature Request': "
         "-ADD to priority: Critical/High/Medium/Low based on user impact "
         "-ADD to technical_details: format exactly as: "
-        "'Devise: X | Version: X |Feature: X | Impact: X | Demand: X' "
+        "'Device: X | Version: X |Feature: X | Impact: X | Demand: X' "
         "For items where category is NOT 'Feature Request': "
         "-Keep priority and technical_details exactly as they already are, do not overwrite them. "
         "Do not remove any existing fields. "
@@ -102,24 +102,6 @@ quality_critic_task = Task(
     agent=quality_critic_agent,
     context=[ticket_creation_task]
 )
-
-'''
-quality_critic_task = Task(
-    description=(
-        "You will receive a list of generated tickets. "
-        "Review each ticket and add these fields: "
-        "-ADD quality_score: integer from 1 to 10 "
-        "-ADD quality_notes: one line explaining the score "
-        "-ADD quality_status: 'Pass' if score >= 7, 'Review' if below 7 "
-        "Do not remove any existing fields. "
-        "Return ONLY a valid JSON list, no extra text."
-    ),
-    expected_output="Valid JSON list of reviewed tickets",
-    agent=quality_critic_agent,
-    context=[ticket_creation_task]
-)
-
-'''
 
 
 
