@@ -29,7 +29,11 @@ def main():
     # Run pipeline
     try:
         print("Starting multi-agent pipeline...")
-        result = feedback_analysis_crew.kickoff(inputs={"feedback": str(feedback)})
+        BATCH_SIZE = 10
+        for i in range(0, len(feedback), BATCH_SIZE):
+            batch = feedback[i:i + BATCH_SIZE]
+            print(f"Processing batch {i//BATCH_SIZE + 1} of {-(-len(feedback)//BATCH_SIZE)}...")
+            feedback_analysis_crew.kickoff(inputs={"feedback": str(batch)})
     except Exception as e:
         print(f"Pipeline failed — {e}")
         exit(1)
